@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  nestjs-mongo:
+    image: mongo:latest
+    container_name: nestjs-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 3001:27017
